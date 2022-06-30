@@ -11,3 +11,88 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.keypad {
+  max-width: 500px;
+  margin: 20px auto;
+}
+.keypad > div {
+  margin: 5px;
+  width: 40px;
+  height: 50px;
+  background: #eee;
+  display: inline-block;
+  border-radius: 6px;
+  line-height: 50px;
+}
+
+.row {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.row > div {
+  display: block;
+  width: 60px;
+  height: 60px;
+  border: 1px solid #bbb;
+  margin: 4px;
+  text-align: center;
+  line-height: 60px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2.5em;
+}
+.row > div.green {
+  background: #5ac85a;
+  border-color: #5ac85a;
+  animation: flip 0.5s ease forwards;
+
+}
+.row > div.grey {
+  background: #a1a1a1;
+  border-color: #a1a1a1;
+  animation: flip 0.5s ease forwards;
+
+}
+.row > div.yellow {
+  background: #e2cc68;
+  border-color: #e2cc68;
+animation: flip 0.5s ease forwards;
+}
+.row > div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.row > div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.row > div:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.row > div:nth-child(5) {
+  animation-delay: 0.8s;
+}
+@keyframes flip {
+  
+0%{
+transform:rotateX(0)
+
+}
+
+50%{
+transform: rotateX(90deg);
+
+}
+
+60%{
+  transform: rotateX(90deg);
+  
+  }
+
+100%{
+transform: rotateX(0);
+
+
+}
+
+}
